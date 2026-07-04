@@ -4,6 +4,7 @@ const cors = require('cors');
 const { Server } = require('socket.io');
 const mongoose = require('mongoose');
 const { connectDB, connectRedis } = require('./src/config/db');
+const matchRoutes = require('./src/routes/matchRoutes');
 require('dotenv').config();
 
 const app = express();
@@ -82,6 +83,8 @@ app.get('/api/v1/health', async (req, res) => {
         data: healthResponse
     });
 });
+
+app.use('/api/v1/matches', matchRoutes);
 
 //core application stack
 server.listen(PORT, () => {
