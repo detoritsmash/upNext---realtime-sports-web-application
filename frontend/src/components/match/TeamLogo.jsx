@@ -1,8 +1,12 @@
 const TeamLogo = ({ team }) => {
   return (
-    <div className="flex flex-col items-center">
-      <div className="w-12 h-12 rounded-full bg-gray-700"></div>
-      <p className="mt-2 text-sm">{team.name}</p>
+    <div className="flex flex-col items-center gap-2">
+      <img
+        src={team.logo}
+        alt={team.name}
+        className="h-12 w-12 rounded-full object-contain"
+      />
+      <p className="text-center text-sm font-medium">{team.name}</p>
     </div>
   );
 };

@@ -3,9 +3,9 @@ import liveMatches from "../../mock/liveMatches.json";
 
 const LiveMatchesSection = () => {
   return (
-    <section className="space-y-4 p-4">
-      <h2 className="text-xl font-bold text-white">
-        Live Matches
+    <section className="space-y-5 p-5">
+      <h2 className="text-2xl font-bold text-white">
+        🔴 Live Matches
       </h2>
 
       {liveMatches.map((match) => (

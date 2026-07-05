@@ -8,7 +8,7 @@ const Home = () => {
     <PageLayout>
       <Navbar />
 
-      <main className="flex-1 pb-20">
+      <main className="pb-24">
         <LiveMatchesSection />
       </main>
 
