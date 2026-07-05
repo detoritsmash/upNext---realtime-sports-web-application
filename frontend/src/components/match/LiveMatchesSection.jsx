@@ -1,0 +1,18 @@
+import MatchCard from "./MatchCard";
+import liveMatches from "../../mock/liveMatches.json";
+
+const LiveMatchesSection = () => {
+  return (
+    <section className="space-y-4 p-4">
+      <h2 className="text-xl font-bold text-white">
+        Live Matches
+      </h2>
+
+      {liveMatches.map((match) => (
+        <MatchCard key={match.id} match={match} />
+      ))}
+    </section>
+  );
+};
+
+export default LiveMatchesSection;

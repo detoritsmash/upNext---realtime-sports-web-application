@@ -1,8 +1,19 @@
+import Navbar from "../../components/layout/Navbar";
+import BottomNavigation from "../../components/layout/BottomNavigation";
+import PageLayout from "../../components/layout/PageLayout";
+import LiveMatchesSection from "../../components/match/LiveMatchesSection";
+
 const Home = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <h1 className="text-3xl font-bold">🏠 Home Page</h1>
-    </div>
+    <PageLayout>
+      <Navbar />
+
+      <main className="flex-1 pb-20">
+        <LiveMatchesSection />
+      </main>
+
+      <BottomNavigation />
+    </PageLayout>
   );
 };
 

@@ -1,0 +1,48 @@
+[
+  {
+    "id": "fb_1034522",
+    "sport": "football",
+    "league": {
+      "name": "Premier League"
+    },
+    "teams": {
+      "home": {
+        "name": "Manchester United"
+      },
+      "away": {
+        "name": "Arsenal"
+      }
+    },
+    "status": {
+      "short": "2H",
+      "elapsed": 74
+    },
+    "score": {
+      "home": 2,
+      "away": 1
+    }
+  },
+  {
+    "id": "bk_884102",
+    "sport": "basketball",
+    "league": {
+      "name": "NBA"
+    },
+    "teams": {
+      "home": {
+        "name": "Lakers"
+      },
+      "away": {
+        "name": "Warriors"
+      }
+    },
+    "status": {
+      "short": "Q3",
+      "elapsed": "04:12"
+    },
+    "score": {
+      "home": 74,
+      "away": 77
+    }
+  }
+]
