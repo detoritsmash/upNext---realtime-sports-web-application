@@ -1,8 +1,30 @@
+import Navbar from "../../components/layout/Navbar";
+import BottomNavigation from "../../components/layout/BottomNavigation";
+import PageLayout from "../../components/layout/PageLayout";
+
+import SportsTabs from "../../components/ui/SportsTabs";
+import LeagueCarousel from "../../components/league/LeagueCarousel";
+import DateTabs from "../../components/ui/DateTabs";
+
+import LiveMatchesSection from "../../components/match/LiveMatchesSection";
+
 const Home = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <h1 className="text-3xl font-bold">🏠 Home Page</h1>
-    </div>
+    <PageLayout>
+      <Navbar />
+
+      <main className="pb-24">
+        <SportsTabs />
+
+        <LeagueCarousel />
+
+        <LiveMatchesSection />
+
+        <DateTabs />
+      </main>
+
+      <BottomNavigation />
+    </PageLayout>
   );
 };
 
