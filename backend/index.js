@@ -5,6 +5,7 @@ const { Server } = require('socket.io');
 const mongoose = require('mongoose');
 const { connectDB, connectRedis } = require('./src/config/db');
 const matchRoutes = require('./src/routes/matchRoutes');
+const searchRoutes = require('./src/routes/searchRoutes');
 const { startPollingEngine } = require('./src/services/SportsService');
 require('dotenv').config();
 
@@ -88,6 +89,8 @@ app.get('/api/v1/health', async (req, res) => {
 });
 
 app.use('/api/v1/matches', matchRoutes);
+app.use('/api/v1/matches', matchRoutes);
+app.use('/api/v1/search', searchRoutes);
 
 //core application stack
 server.listen(PORT, () => {

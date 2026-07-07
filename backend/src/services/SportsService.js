@@ -58,7 +58,9 @@ async function fetchLiveMatchesFromAPI() {
             const normalized = normalizeFootballMatch(rawMatch);
             
             await redis.hset('live_matches', normalized.id, JSON.stringify(normalized));
+        
         }
+        await redis.expire('live_matches', 960); //time- to - live 16 minutes
 
         console.log(`✅ Successfully cached ${rawFixtures.length} live matches to Redis memory.`);
         
