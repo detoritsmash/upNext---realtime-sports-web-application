@@ -70,7 +70,11 @@ async function fetchLiveMatchesFromAPI() {
 /**
  * background automated schedulers.
  */
-const startPollingEngine = () => {
+const startPollingEngine = async () => {
+
+    console.log('🚀 Executing initial API fetch on startup...');
+    await fetchLiveMatchesFromAPI();
+
     // Run the live polling service every 15 min
     cron.schedule('*/15 * * * *', async () => {
         await fetchLiveMatchesFromAPI();

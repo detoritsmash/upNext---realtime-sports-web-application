@@ -5,6 +5,7 @@ const { Server } = require('socket.io');
 const mongoose = require('mongoose');
 const { connectDB, connectRedis } = require('./src/config/db');
 const matchRoutes = require('./src/routes/matchRoutes');
+const { startPollingEngine } = require('./src/services/SportsService');
 require('dotenv').config();
 
 const app = express();
@@ -13,6 +14,8 @@ const PORT = process.env.PORT || 5000;
 
 connectDB();
 const redis = connectRedis();
+
+startPollingEngine(); // Start the polling engine to fetch live match data from the external API and cache it in Redis
 
 // Middleware
 app.use(cors({ origin: '*' })); // Open for local dev integration with Dev B
